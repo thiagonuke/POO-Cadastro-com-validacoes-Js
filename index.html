@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de candidatos</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="cabecalho">  
+            <h1>XTPO</h1>
+            <h2>Programa Trainee</h2>
+    </header>   
+    <section class="container">
+        <div class="box-formulario">
+            <form action="" id="form-register" class="formulario">
+                <fieldset>
+                    <legend> <b> Area do candidato </b> </legend>
+                    <div class="area-input">    
+                        <label for="nome">Nome:</label>
+                        <input type="text" id="nome" name="nome" class="input-usario" placeholder="Digite seu nome" data-min-length="3" data-required>
+                    </div>
+                    <br>
+                    <div class="area-input">
+                        <label for="Sobrenome">Sobrenome:</label>
+                        <input type="text" id="sobrenome" name="sobrenome" class="input-usario" placeholder="Digite seu Sobrenome" data-max-length="16" data-min-length="3" data-required>
+                    </div>
+                    <br>
+                    <div class="area-input">
+                        <label for="CPF">CPF:</label> <br>
+                        <input type="number" id="cpf" name="CPF" class="input-usario" placeholder="Digite seu CPF" data-required>
+                        
+                    </div>
+                    <br>
+                    <div class="area-input">
+                        <label for="Datanasc">Data de Nascimento:</label>
+                        <input type="date" id="datanasc" name="Datanasc" class="input-usario" placeholder="Digite sua Data de Nascimento" data-required>                        
+                    </div>
+                    <br>
+                    <div class="area-input">
+                        <label for="idade">Idade:</label>
+                        <input type="number" id="idade" name="idade" class="input-usario" placeholder="Digite sua idade" data-required>
+                    </div>
+                    <br> 
+                    <div class="area-radio">
+                        <h5>Possui maioridade?</h6>  
+                        <select class="selecao" name="Maioridade" id="opcao" data-required>
+                            <option value="sim">Sim</option>
+                            <option value="nao">Nao</option>
+                        </select>
+                    </div>
+                    <br>
+                    <div class="area-vaga">
+                        <h5>Vaga requerida:</h5>
+                        <select id="vaga" name="vaga"  class="selecao" data-required>
+                            <option id="vaga1" name="vaga1" >Vaga 1</option>
+                            <option>Vaga 2</option>
+                            <option>Vaga 3</option>
+                            <option>Vaga 4</option>
+                            <option>Vaga 5</option>
+                        </select>
+                        
+                    </div>
+                    <br>
+                    <button class="btn" type="submit" name="submit" onclick="candidate.salvar()" id="btn">Salvar</button>
+                </fieldset>
+            </form>
+        </div>
+
+        <div class="container2">           
+            <button class="botao-tab" id="show-or-hide">Tabela/Grid</button>
+            <div class="area-tabela">
+                <table border="1">
+                    <thead>
+                        <th>Nome</th>
+                        <th>Data de Nasc</th>
+                        <th>Sobrenome</th>
+                        <th>CPF</th>
+                        <th>Idade</th>
+                        <th>Maioridade</th>
+                        <th>Vaga</th>
+                    </thead>
+                    <tbody id="tbody">
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        
+        </div> 
+    </section>
+
+    <footer class="rodape">
+        
+    </footer>
+        <p class="error-validation template"></p>
+    <script type="text/javascript" src="script.js"></script>
+</body>
+</html>
